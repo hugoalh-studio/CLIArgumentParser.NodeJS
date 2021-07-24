@@ -21,7 +21,7 @@
 
 ## 📝 Description
 
-*[For Deno Edition, please visit here.](https://github.com/hugoalh-studio/command-line-parser-deno)*
+*[For Deno edition, please visit here.](https://github.com/hugoalh-studio/command-line-parser-deno)*
 
 ### 🌟 Feature
 
