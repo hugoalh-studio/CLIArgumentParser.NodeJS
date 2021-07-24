@@ -1,6 +1,6 @@
 {
 	"name": "@hugoalh/command-line-parser",
-	"version": "0.11.0",
+	"version": "0.12.0",
 	"description": "A module to parse command line with better standard.",
 	"keywords": [
 		"argument",

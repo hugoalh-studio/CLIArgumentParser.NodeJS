@@ -48,7 +48,7 @@ Parse command line.
 
 ##### `commandLine?`
 
-`<string[] = []>` Command line that need to parse.
+`<string[] = process.argv.slice(2)>` Command line that need to parse.
 
 #### Return
 
