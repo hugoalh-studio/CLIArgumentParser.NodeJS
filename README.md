@@ -21,6 +21,8 @@
 
 ## 📝 Description
 
+*[For Deno Edition, please visit here.](https://github.com/hugoalh-studio/command-line-parser-deno)*
+
 ### 🌟 Feature
 
 - Easier to remember which is flag and which is option (i.e.: key-value pair).
