@@ -26,7 +26,7 @@
 ### 🌟 Feature
 
 - Easier to remember which is flag and which is option (i.e.: key-value pair).
-- Native support for CommonJS and ECMAScript.
+- Native support for CommonJS and ModuleJS.
 
 ## 📚 Documentation
 

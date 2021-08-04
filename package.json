@@ -1,6 +1,6 @@
 {
 	"name": "@hugoalh/command-line-parser",
-	"version": "0.12.0",
+	"version": "0.12.1",
 	"description": "A module to parse command line with better standard.",
 	"keywords": [
 		"argument",
@@ -15,9 +15,13 @@
 	},
 	"license": "MIT",
 	"author": "hugoalh",
-	"main": "lib/main.js",
+	"main": "./lib/main.js",
+	"exports": {
+		"import": "./lib/main.mjs",
+		"require": "./lib/main.js"
+	},
 	"bin": {
-		"command-line-parser": "bin/main.js"
+		"command-line-parser": "./bin/main.js"
 	},
 	"repository": {
 		"type": "git",
