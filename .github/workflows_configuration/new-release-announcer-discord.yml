@@ -28,5 +28,5 @@ embeds:
         value: "https://www.npmjs.com/package/@hugoalh/command-line-parser"
         inline: false
       - name: "Repository"
-        value: "https://github.com/hugoalh-studio/command-line-parser-nodejs"
+        value: "%payload.repository.html_url%"
         inline: false
