@@ -22,7 +22,7 @@
 
 A NodeJS module to parse command line with better standard.
 
-[For Deno edition, please visit here.](https://github.com/hugoalh-studio/command-line-parser-deno)
+*For the Deno edition, please visit Command Line Parser (Deno Edition) ([GitHub](https://github.com/hugoalh-studio/command-line-parser-deno))([Deno Land](https://deno.land/x/hugoalh_command_line_parser)).*
 
 ### 🌟 Feature
 
