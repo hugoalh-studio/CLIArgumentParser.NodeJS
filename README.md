@@ -1,7 +1,6 @@
 # Command Line Parser (NodeJS Edition)
 
-[`CommandLineParser.NodeJS`](https://github.com/hugoalh-studio/command-line-parser-nodejs) - A NodeJS module to parse command line with better standard.
-
+[`CommandLineParser.NodeJS`](https://github.com/hugoalh-studio/command-line-parser-nodejs)
 [![GitHub Contributors](https://img.shields.io/github/contributors/hugoalh-studio/command-line-parser-nodejs?label=Contributors&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/command-line-parser-nodejs/graphs/contributors)
 [![GitHub Issues](https://img.shields.io/github/issues-raw/hugoalh-studio/command-line-parser-nodejs?label=Issues&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/command-line-parser-nodejs/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/hugoalh-studio/command-line-parser-nodejs?label=Pull%20Requests&logo=github&logoColor=ffffff&style=flat-square)](https://github.com/hugoalh-studio/command-line-parser-nodejs/pulls)
@@ -14,14 +13,16 @@
 ![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/g/hugoalh-studio/command-line-parser-nodejs?label=Grade&logo=lgtm&logoColor=ffffff&style=flat-square)](https://lgtm.com/projects/g/hugoalh-studio/command-line-parser-nodejs)
 [![License](https://img.shields.io/static/v1?label=License&message=MIT&color=brightgreen&style=flat-square)](./LICENSE.md)
 
-| **Release** | **Latest** | **Pre** |
+| **Release** | **Latest** (![GitHub Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/command-line-parser-nodejs?label=%20&style=flat-square)) | **Pre** (![GitHub Latest Pre-Release Date](https://img.shields.io/github/release-date-pre/hugoalh-studio/command-line-parser-nodejs?label=%20&style=flat-square)) |
 |:-:|:-:|:-:|
-| [**GitHub**](https://github.com/hugoalh-studio/command-line-parser-nodejs/releases) ![GitHub Total Downloads](https://img.shields.io/github/downloads/hugoalh-studio/command-line-parser-nodejs/total?label=%20&style=flat-square) | ![GitHub Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/command-line-parser-nodejs?sort=semver&label=%20&style=flat-square) (![GitHub Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/command-line-parser-nodejs?label=%20&style=flat-square)) | ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/hugoalh-studio/command-line-parser-nodejs?include_prereleases&sort=semver&label=%20&style=flat-square) (![GitHub Latest Pre-Release Date](https://img.shields.io/github/release-date-pre/hugoalh-studio/command-line-parser-nodejs?label=%20&style=flat-square)) |
+| [**GitHub**](https://github.com/hugoalh-studio/command-line-parser-nodejs/releases) ![GitHub Total Downloads](https://img.shields.io/github/downloads/hugoalh-studio/command-line-parser-nodejs/total?label=%20&style=flat-square) | ![GitHub Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/command-line-parser-nodejs?sort=semver&label=%20&style=flat-square) | ![GitHub Latest Pre-Release Version](https://img.shields.io/github/release/hugoalh-studio/command-line-parser-nodejs?include_prereleases&sort=semver&label=%20&style=flat-square) |
 | [**NPM**](https://www.npmjs.com/package/@hugoalh/command-line-parser) ![NPM Total Downloads](https://img.shields.io/npm/dt/@hugoalh/command-line-parser?label=%20&style=flat-square) | ![NPM Latest Release Version](https://img.shields.io/npm/v/@hugoalh/command-line-parser/latest?label=%20&style=flat-square) | ![NPM Latest Pre-Release Version](https://img.shields.io/npm/v/@hugoalh/command-line-parser/pre?label=%20&style=flat-square) |
 
 ## 📝 Description
 
-*[For Deno edition, please visit here.](https://github.com/hugoalh-studio/command-line-parser-deno)*
+A NodeJS module to parse command line with better standard.
+
+[For Deno edition, please visit here.](https://github.com/hugoalh-studio/command-line-parser-deno)
 
 ### 🌟 Feature
 
@@ -32,41 +33,44 @@
 
 ### Getting Started
 
-NodeJS (>= v14.15.0) & NPM (>= v6.14.8):
+#### Install
+
+NodeJS (>= v14.15.0) + NPM (>= v6.14.8):
 
 ```sh
 npm install @hugoalh/command-line-parser
 ```
 
+#### Use In CommonJS
+
+```js
+const commandLineParser = require("@hugoalh/command-line-parser");
+```
+
+#### Use In ModuleJS
+
+```js
+import commandLineParser from "@hugoalh/command-line-parser";
+```
+
 ### API
 
-`(commandLine?)`
-
-#### Description
-
-Parse command line.
-
-#### Argument
-
-##### `commandLine?`
-
-`<string[] = process.argv.slice(2)>` Command line that need to parse.
-
-#### Return
-
-`<object>` Parse result.
-- **`action`:** `<string[]>`
-- **`fault`:** `<string[]>` Unparseable argument.
-- **`flag`:** `<string[]>` Flag.
-- **`option`:** `<object>` Key-value pair.
+```ts
+commandLineParser(
+  commandLine?: string[] = process.argv.slice(2)
+): {
+  action: string[],
+  fault: string[],// Unparseable argument.
+  flag: string[],// Flag.
+  option: { [index: string]: string }// Key-value pair.
+}
+```
 
 ### Example
 
 ```js
-const commandLineParser = require("@hugoalh/command-line-parser");
-
-console.log(commandLineParser(["-test", "--message=\"Hello, world!\"", "lol", "---fail"]));
-/*
+commandLineParser(["-test", "--message=\"Hello, world!\"", "lol", "---fail"]);
+/*=>
 {
   action: [
     "lol"
